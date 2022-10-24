@@ -13,12 +13,19 @@ import Welcome from '../Components/Welcome/Welcome';
 const Stack = createNativeStackNavigator();
 
 function MyStack() {
+
     return (
         <Stack.Navigator>
-            <Stack.Screen name='Welcome' component={Welcome} />
-            {/* <Stack.Screen name="Login" component={<LoginForm title='Log into Yout Account'/>} />
-            <Stack.Screen name="Register" component={<RegisterForm title='Create Your Account' /> } /> */}
-            <Stack.Screen name="User Profile" component={UserProfile} />
+            <Stack.Screen 
+                name='Welcome' 
+                component={Welcome}
+                options={{
+                    headerShown: false
+                }}
+             />
+            <Stack.Screen name="LoginScreen" component={LoginForm} />
+            <Stack.Screen name="RegisterScreen" component={RegisterForm} />
+            <Stack.Screen name="UserProfile" component={UserProfile} />
         </Stack.Navigator>
     )
 }

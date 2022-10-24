@@ -24,6 +24,6 @@ const styles = StyleSheet.create({
         flex: 1,
         // backgroundColor: 'black',
         alignItems: 'center',
-        marginTop: 35,
+        // marginTop: 35,
     }
 })

@@ -1,4 +1,3 @@
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 //Stacks
@@ -13,16 +12,28 @@ const Tab = createBottomTabNavigator();
 const Main = () => {
     return (
         <Tab.Navigator
-        initialRouteName='Home'
-        tabBarOptions={{
-            keyboardHidesTabBar : true
-
-        }}        
+        initialRouteName='Home'   
         >
-            <Tab.Screen name="Home" component={HomeNavigator} />
-            <Tab.Screen name="Cart" component={CartNavigator} />
-            <Tab.Screen name="Admin" component={AdminNavigator} />
-            <Tab.Screen name="User" component={UserNavigator} />
+            <Tab.Screen 
+                name="HomeTab" 
+                component={HomeNavigator} 
+                
+            />
+            <Tab.Screen 
+                name="CartTab" 
+                component={CartNavigator} 
+            />
+            <Tab.Screen 
+                name="Admin" 
+                component={AdminNavigator} 
+            />
+            <Tab.Screen
+                 name="User"
+                component={UserNavigator} 
+                options={{
+                    headerShown: false
+                }}
+            />
         </Tab.Navigator>
     )
 }

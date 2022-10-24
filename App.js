@@ -13,12 +13,17 @@ import Banner from './Components/Homepage/Banner';
 import Home from './Components/Homepage/main/Home';
 import Main from './Navigators/Main';
 
+import { Provider } from 'react-redux';
+import store from './Redux/store'
 export default function App() {
   return (
-    <NavigationContainer>
-      <Main />
-    </NavigationContainer>
-   
+    <Provider store={store}>
+      <NavigationContainer>
+        <Main />
+      </NavigationContainer>
+    </Provider>
+
+
   );
 }
 

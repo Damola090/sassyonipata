@@ -2,12 +2,12 @@ import { View, Text, StyleSheet } from 'react-native';
 import Button from '../ui/Button';
 import FormInput from '../ui/FormInput';
 
-function RegisterForm({ title }) {
+function RegisterForm() {
 
     return (
         <View style={styles.FormContainer}>
             <View style={styles.headContainer}>
-                <Text style={styles.headContainerText}>{title}</Text>
+                <Text style={styles.headContainerText}>Register Your Account</Text>
             </View>
             <View style={styles.FormContent}>
                 <FormInput>Name</FormInput>

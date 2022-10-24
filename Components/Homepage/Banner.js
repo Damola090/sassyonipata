@@ -21,8 +21,8 @@ const styles = StyleSheet.create({
     outerContainer: {
         flex: 0.4,
         backgroundColor: 'red',
-        width: 400,
-        borderRadius: 20,
+        width: '100%',
+        // borderRadius: 20,
         overflow: 'hidden',
     },
     banner: {

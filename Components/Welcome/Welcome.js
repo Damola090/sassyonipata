@@ -1,9 +1,24 @@
 import { View, Text, StyleSheet, ImageBackground } from 'react-native';
 
+import { useNavigation } from '@react-navigation/native'
+
 import Button from '../ui/Button';
 import { MaterialIcons } from '@expo/vector-icons'
 
 function Welcome() {
+
+    const navigation = useNavigation();
+
+    function SignInHandler() {
+        navigation.navigate('LoginScreen')
+
+    }
+
+    function SignUpHandler() {
+        navigation.navigate('RegisterScreen')
+
+
+    }
 
     return (
         <ImageBackground
@@ -22,8 +37,8 @@ function Welcome() {
                         <Text style={styles.HeadText}>Ideal Store For Your Shopping</Text>
                     </View>
                     <View style={styles.ButtonContainer}>
-                        <Button style={styles.Emailbackground}>SIGN UP WITH EMAIL</Button>
-                        <Button style={styles.background} mode='flat'>CONTINUE WITH FACEBOOK</Button>
+                        <Button whenPressed={SignUpHandler} style={styles.Emailbackground}>SIGN UP WITH EMAIL</Button>
+                        <Button whenPressed={SignInHandler} style={styles.background} mode='flat'>CONTINUE WITH FACEBOOK</Button>
                     </View>
                 </View>
             </View>
